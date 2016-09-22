@@ -34,7 +34,6 @@ public class WikipediaSearchCell: UITableViewCell {
             let disposeBag = DisposeBag()
 
             viewModel.title
-                .map(Optional.init)
                 .drive(self.titleOutlet.rx.text)
                 .addDisposableTo(disposeBag)
 

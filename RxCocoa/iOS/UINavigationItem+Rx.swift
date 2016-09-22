@@ -18,7 +18,7 @@ extension Reactive where Base: UINavigationItem {
     /**
     Bindable sink for `title` property.
     */
-    public var title: AnyObserver<String?> {
+    public var title: AnyObserver<String> {
         return UIBindingObserver(UIElement: self.base) { navigationItem, text in
             navigationItem.title = text
             }.asObserver()
